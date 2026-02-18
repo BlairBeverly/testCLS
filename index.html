@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Citizen-Led Solutions Chat</title>
     <style>
-      body { font-family: system-ui, -apple-system, sans-serif; margin: 40px; max-width: 900px; }
-      h1 { margin-bottom: 0.25rem; }
-      p { color: #444; line-height: 1.5; }
-      .note { color: #666; font-size: 0.95rem; margin-top: 1rem; }
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 0;
+        background: #f6f7f9;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 0.25rem;
+      }
+
+      .desc {
+        color: #444;
+        margin-bottom: 20px;
+      }
+
+      /* This is where the embedded chat will render */
+      #webchat {
+        height: 650px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        background: white;
+      }
     </style>
   </head>
   <body>
-    <h1>Citizen-Led Solutions Chat</h1>
-    <p>
-      Ask what CLS is, how it works, or get help thinking through a local community initiative.
-      If you choose, the bot can also collect a few details so the CLS team can support you.
-    </p>
-    <p class="note">Use the chat bubble in the bottom-right.</p>
+    <div class="container">
+      <h1>Citizen-Led Solutions</h1>
+      <div class="desc">
+        Learn about Citizen-Led Solutions, explore ideas for your community, or get help starting a local initiative.
+      </div>
+
+      <div id="webchat"></div>
+    </div>
 
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/02/18/15/20260218150516-GALIJDV5.js" defer></script>
